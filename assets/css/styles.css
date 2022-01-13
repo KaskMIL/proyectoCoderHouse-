@@ -11180,6 +11180,21 @@ textarea.form-control-lg {
   }
 }
 
+.catalogo-section h1 {
+  font-family: "Ultra", serif;
+  font-size: 5rem;
+}
+.catalogo-section h5 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.catalogo-section p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
 .menu {
   background: linear-gradient(to right, rgba(109, 77, 235, 0.95), rgba(219, 63, 29, 0.95));
 }
@@ -11201,13 +11216,13 @@ textarea.form-control-lg {
 
 .inicio-section {
   background: linear-gradient(to right, rgba(109, 77, 235, 0.95), rgba(219, 63, 29, 0.95));
-  padding: 10rem 0 3rem 0;
+  padding: 10rem 0 0 0;
   width: 100%;
   height: 100%;
 }
 @media (max-width: 575.98px) {
   .inicio-section {
-    padding: 6.5rem 0 2rem 0;
+    padding: 6.5rem 0 0 0;
   }
 }
 .inicio-section h1 {
@@ -11215,6 +11230,26 @@ textarea.form-control-lg {
 }
 .inicio-section p {
   color: #fff;
+}
+
+.catalogo-section {
+  background-color: #6D4DEB;
+  padding-bottom: 5rem;
+  color: #fff;
+}
+.catalogo-section h1 {
+  margin-bottom: 4rem;
+}
+.catalogo-section .card-section {
+  border: 0.1rem solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding-top: 0.5rem;
+}
+.catalogo-section .card-section img {
+  margin-bottom: 1rem;
+}
+.catalogo-section .options {
+  margin-bottom: 2rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

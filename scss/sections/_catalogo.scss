@@ -1,0 +1,29 @@
+@use "../custom" as *;
+@use "../components/mixin" as *;
+
+.catalogo-section{
+    background-color: $primary;
+    padding-bottom: 5rem;
+    color: $white;
+
+    h1{
+        margin-bottom: 4rem;
+    }
+
+   .card-section{
+       border: 0.1rem solid rgba($white, 0.1);
+       border-radius: 1rem;
+       padding-top: 0.5rem;
+
+       img{
+           margin-bottom: 1rem;
+       }
+   }
+
+   .options{
+       margin-bottom: 2rem;
+   }
+
+
+    
+}
