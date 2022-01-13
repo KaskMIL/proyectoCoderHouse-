@@ -1,0 +1,20 @@
+@use "../custom" as *;
+@use "../components/mixin" as *;
+
+.inicio-section{
+    @include media-breakpoint-down(sm){
+        padding: 6.5rem 0 2rem 0; 
+    }
+    @include gradient;
+    padding: 10rem 0 3rem 0;
+    width: 100%;
+    height: 100%;
+
+    h1{
+        color: $white;
+    }
+
+    p{
+        color: $white;
+    }
+}

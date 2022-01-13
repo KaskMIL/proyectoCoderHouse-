@@ -1,0 +1,24 @@
+@use '../custom' as *;
+
+
+.display-2{
+    @include media-breakpoint-down(sm){
+        font-size: 1.6rem;
+        line-height: 2rem;
+        margin-bottom: 1rem;
+    }
+    margin-bottom: 2rem;
+    font-family: 'Ultra', serif;
+    font-size: 3rem;
+}
+
+.display-2--intro{
+    @include media-breakpoint-down(sm){
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+    }
+    font-family:'Poppins', sans-serif;
+    font-size: 1.2rem;
+    line-height: 2.3rem;
+    font-weight: 300;
+}

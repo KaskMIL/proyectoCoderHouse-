@@ -18,7 +18,8 @@
 
 <body>
   <!-- NAVBAR SECTION -->
-  <nav class="navbar navbar-expand-lg navbar-light menu">
+  <header></header>
+  <nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#">
         <img src="images/logo2.png" width="180px" height="60px" alt="logo image"></a>
@@ -50,23 +51,45 @@
       </div>
     </div>
   </nav>
+</header>
   <!-- INICIO SECTION -->
+  <section id="inicio" class="inicio-section">
   <div class="container">
     <div class="row">
-      <div class="col-sm-12 col-md-6">
-        <h1>Discos de vinilo <br />
-          Discos de Coleccion <br />
+      <div class="col-sm-12 col-md-6 inicio">
+        <h1 class="display-2">Vinilos <br />
+          Coleccion <br />
           Nuevos y Usados<br />
           Accesorios y Equipo</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit voluptate, libero maiores reprehenderit
+        <p class="display-2--intro">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit voluptate, libero maiores reprehenderit
           consectetur, aliquid maxime in fugit eaque earum ex natus laudantium dignissimos veniam nemo. Modi dignissimos
           tempora ducimus!</p>
       </div>
-      <div class="col-sm-12 col-md-6">
-        <img src="https://via.placeholder.com/500/300" alt="" width="100%" height="400px">
+
+      <div class="col-sm-12 col-md-6 inicio">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/general/disco-play.jpg" class="d-block w-100" alt="disco-play">
+            </div>
+            <div class="carousel-item">
+              <img src="images/general/record-player-phillips.jpg" class="d-block w-100" alt="record-player">
+            </div>
+            <div class="carousel-item">
+              <img src="images/general/records-suitcase.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="images/general/soundsystem-sony.jpg" class="d-block w-100" alt="sound-system">
+            </div>
+            <div class="carousel-item">
+              <img src="images/general/vinyl spreded.jpg" class="d-block w-100" alt="vinyls">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+</section>
   <!-- CATALOGO SECTION -->
   <div class="container text-center">
     <h1>este va a ser el catalogo</h1>

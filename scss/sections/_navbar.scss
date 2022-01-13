@@ -3,14 +3,19 @@
 
 .menu{
     @include gradient;
+    @include media-breakpoint-down(md){
+        margin: 0;
+    }
 
     li{
-        padding: 0 0.7rem;
+        padding: 0 1rem;
+        margin: 0 0.7rem;
 
         a{
             color: $white !important;
             text-transform: capitalize;
             font-weight: 600;
+            font-size: 1.1rem;
         }
     }
 }
