@@ -37,3 +37,17 @@
         }
     }
 }
+
+.btn-cat{
+    margin: 0 0.2rem;
+    background-color: transparent;
+    border: 0.1rem solid rgba($white, 0.1);
+
+    i{
+        color: $white;
+    }
+
+    &:hover{
+        background-color: $primary;
+    }
+}

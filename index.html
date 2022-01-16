@@ -135,9 +135,11 @@
 
           <!-- START CARDS -->
 
-          <div id="card-container" class="row">
-
-          </div>
+          <div id="card-container" class="row"></div>
+          <hr>
+          <!-- START CARRITO -->
+          <div id="carrito-container" class="row"></div>
+          <div id="carrito-footer" class="row"></div>
         </div>
       </div>
     </div>
@@ -146,7 +148,7 @@
   </section>
 
 
-  <!-- TEMPLATE -->
+  <!-- TEMPLATES -->
   <template id="card-template">
     <div class="col-6 col-md-3">
       <div class="card-section m-2">
@@ -155,11 +157,38 @@
         <h5 id="titulo"></h5>
         <p id="precio"></p>
         <button id = "btn" type="button" class="btn-outline-primary mb-2">
-          Agregar a carrito
+          Agregar al carrito
         </button>
       </div>
     </div>
   </template>
+
+  <template id="carritoTemplate">
+    <div class="container carrito">
+      <div class="row">
+        <div class="col-12 col-md-4">
+          <img id="imgCarrito" src="" alt="" width="25%" height="auto">
+        </div>
+        <div class="col-12 col-md-4">
+          <h4 id="bandaCarrito"></h4>
+          <h5 id="tituloCarrito"></h5>
+        </div>
+        <div class="col-12 col-md-4">
+          <p id="precioCarrito"></p>
+          <div class="icon">
+            <button type = "button" class="btn-cat rounded-pill">
+              <i class="fa fa-plus"></i>
+            </button>
+          <button class="btn-cat rounded-pill" type="button">
+            <i class="fa fa-minus"></i>
+          </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+
+
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

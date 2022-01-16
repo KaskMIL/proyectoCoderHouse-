@@ -11154,6 +11154,18 @@ textarea.form-control-lg {
   background-color: transparent;
 }
 
+.btn-cat {
+  margin: 0 0.2rem;
+  background-color: transparent;
+  border: 0.1rem solid rgba(255, 255, 255, 0.1);
+}
+.btn-cat i {
+  color: #fff;
+}
+.btn-cat:hover {
+  background-color: #6D4DEB;
+}
+
 .display-2 {
   margin-bottom: 2rem;
   font-family: "Ultra", serif;
@@ -11184,15 +11196,32 @@ textarea.form-control-lg {
   font-family: "Ultra", serif;
   font-size: 5rem;
 }
+.catalogo-section h4 {
+  font-weight: 900;
+}
 .catalogo-section h5 {
   font-family: "Poppins", sans-serif;
-  font-weight: 700;
+  font-weight: 300;
   font-size: 1.5rem;
 }
 .catalogo-section p {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-size: 0.9rem;
+}
+
+.carrito h4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.carrito h5 {
+  font-weight: 300;
+  font-size: 2.5rem;
+}
+.carrito p {
+  font-size: 2.5rem;
 }
 
 .menu {
@@ -11250,6 +11279,14 @@ textarea.form-control-lg {
 }
 .catalogo-section .options {
   margin-bottom: 2rem;
+}
+
+.carrito {
+  margin: 0.5rem 0;
+  background: linear-gradient(to right, rgba(109, 77, 235, 0.95), rgba(219, 63, 29, 0.95));
+  padding: 1rem 0;
+  border: 0.01 solid transparent;
+  border-radius: 1rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

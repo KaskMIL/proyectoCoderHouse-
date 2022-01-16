@@ -23,7 +23,12 @@
    .options{
        margin-bottom: 2rem;
    }
+}
 
-
-    
+.carrito{
+    margin: 0.5rem 0;
+    @include gradient;
+    padding: 1rem 0;
+    border: 0.01 solid transparent;
+    border-radius: 1rem;
 }
