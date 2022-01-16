@@ -1,55 +1,67 @@
-function Catalogo (id, banda, disco, precio, img, descripcion){
-    this.id = id;
-    this.banda = banda;
-    this.disco = disco;
-    this.precio = precio;
-    this.img = img;
-    this.descripcion = descripcion;
-}
-
-const fragment = document.createDocumentFragment();
-
-const disco = new Catalogo(1,"AC-DC", "Burnst or Die", 350, "images/discos/ac-dc-rock-or-burst.png","consectetur, aliquid maxime in fugit eaque earum ex natus laudantium dignissimos veniam nemo. Moddignissimostempora ducimus!" );
-
-/*
-//tomo el elemento
-const card = document.getElementById("card-body");
-//creo el elemento
-const banda = document.createElement("h5");
-//asigno valor al elemento
-banda.innerHTML = disco.banda;
-//incorporo al DOM
-fragment.appendChild(banda);
-const titulo = document.createElement("p");
-titulo.innerHTML = disco.disco;
-fragment.appendChild(titulo);
-const precio = document.createElement("p");
-precio.innerHTML += `$${disco.precio}`;     //template
-fragment.appendChild(precio);
-
-card.appendChild(fragment);
-*/
-
-
+//toma elementos del DOM
 const cardContainer = document.getElementById("card-container");
 const cardTemplate = document.getElementById("card-template").content;
+const fragment = document.createDocumentFragment();
+//carrito de compras
+let carrito = {};
 
-for(let i = 0; i < 5; i++){
-cardTemplate.getElementById("img").innerHTML = disco.img;
-cardTemplate.getElementById("band").innerHTML = disco.banda;
-cardTemplate.getElementById("titulo").innerHTML = disco.disco;
-cardTemplate.getElementById("desc").innerHTML = disco.descripcion;
+//espera a cargar completamente el html
+document.addEventListener('DOMContentLoaded', () => {
+    fetchData();
+})
+//listener en card-container
+cardContainer.addEventListener("click", e => {
+    addCarrito(e);
+})
 
-
-const clone = cardTemplate.cloneNode(true);
-fragment.appendChild(clone);
+const fetchData = async () => {
+    try{
+        const resultado = await fetch("assets/api.json");
+        const data = await resultado.json();
+        pintarCards(data);
+    }
+    catch(error){
+        console.log(error);
+    }
 }
 
+const pintarCards = data => {
+    data.forEach(producto => {
+        cardTemplate.getElementById("band").innerHTML = producto.banda;
+        cardTemplate.getElementById("titulo").innerHTML = producto.disco;
+        cardTemplate.getElementById("img").setAttribute("src", producto.img)
+        cardTemplate.getElementById("btn").dataset.id = producto.id;
+        cardTemplate.getElementById("precio").innerHTML = `$${producto.precio}`;
 
-cardContainer.appendChild(fragment);
+        const clone = cardTemplate.cloneNode(true);
+        fragment.appendChild(clone);
+    })
+    cardContainer.appendChild(fragment);
+}
 
+const addCarrito = e => {
+    if(e.target.classList.contains("btn-outline-primary")){
+        setCarrito(e.target.parentElement);
+    }
+}
 
+const setCarrito = objeto =>{
+    const producto = {
+        id: objeto.querySelector("button").dataset.id,
+        banda: objeto.querySelector("h4").textContent,
+        disco: objeto.querySelector("h5").textContent,
+        precio: objeto.querySelector("p").textContent,
+        cantidad: 1
+    }
+    //aumentar cantidad de mismo producto
+    if(carrito.hasOwnProperty(producto.id)){
+        producto.cantidad = carrito[producto.id].cantidad + 1;
+    }
 
+    //sumar al carrito como copia del objeto solo se;alando el ID
 
+    carrito[producto.id] = {...producto};
 
+    console.log(carrito);
+}
 

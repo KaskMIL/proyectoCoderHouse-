@@ -134,9 +134,9 @@
           <!-- END OPTIONS -->
 
           <!-- START CARDS -->
-          
-            <div id="card-container" class="col-lg-2 col-md-4 d-flex">
-            
+
+          <div id="card-container" class="row">
+
           </div>
         </div>
       </div>
@@ -148,11 +148,16 @@
 
   <!-- TEMPLATE -->
   <template id="card-template">
-    <div class="card-section m-2">
-      <img id="img" src="" alt="">
-      <h5 id="band"></h5>
-      <h5 id="titulo"></h5>
-      <p id="desc"></p>
+    <div class="col-6 col-md-3">
+      <div class="card-section m-2">
+        <img id="img" src="" alt="" class="card-img-top">
+        <h4 id="band"></h4>
+        <h5 id="titulo"></h5>
+        <p id="precio"></p>
+        <button id = "btn" type="button" class="btn-outline-primary mb-2">
+          Agregar a carrito
+        </button>
+      </div>
     </div>
   </template>
 

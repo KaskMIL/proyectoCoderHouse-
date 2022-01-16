@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "banda": "AC-DC",
+        "disco": "Burnst or Die",
+        "precio": 350,
+        "img": "../images/discos/ac-dc-rock-or-burst.png"
+    },
+    {
+        "id": 2,
+        "banda": "Amy Winehouse",
+        "disco": "Back to Black",
+        "precio": 350,
+        "img": "../images/discos/amywinehouse-back-to-black.png"
+    },
+    {
+        "id": 3,
+        "banda": "Arcade Fire",
+        "disco": "Everything Now",
+        "precio": 350,
+        "img": "../images/discos/arcade-fire-everything-now.png"
+    },
+    {
+        "id": 4,
+        "banda": "Arctic Monkeys",
+        "disco": "Wathever People Say I Am",
+        "precio": 350,
+        "img": "../images/discos/arctic-monkeys-whatever-people-say-i-am.png"
+    },
+    {
+        "id": 5,
+        "banda": "Arctic Monkeys",
+        "disco": "Suck It and See",
+        "precio": 350,
+        "img": "../images/discos/arctic-monleys-sick-it-and-see.png"
+    },
+    {
+        "id": 6,
+        "banda": "Arctic Monkeys",
+        "disco": "AM",
+        "precio": 350,
+        "img": "../images/discos/arcticmonkeys-AM.png"
+    },
+    {
+        "id": 7,
+        "banda": "Bad Religion",
+        "disco": "The Empire Strikes First",
+        "precio": 350,
+        "img": "../images/discos/badreligion-the-empire-strikes-first.png"
+    },
+    {
+        "id": 8,
+        "banda": "Beastie Boys",
+        "disco": "Ill communication",
+        "precio": 350,
+        "img": "../images/discos/beastie-boys-ill-communication.jpg"
+    },
+    {
+        "id": 9,
+        "banda": "Beastie Boys",
+        "disco": "Mix Up",
+        "precio": 350,
+        "img": "../images/discos/beastie-boys-mix-up.png"
+    },
+    {
+        "id": 10,
+        "banda": "Beach Boys",
+        "disco": "L.A",
+        "precio": 350,
+        "img": "../images/discos/bech-boys-la.png"
+    }
+]
