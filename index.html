@@ -36,10 +36,12 @@
             <a class="nav-link" href="#">Catalogo</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Testimonios</a>
+            <a class="nav-link" href="#">Nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Nosotros</a>
+            <a class="nav-link" href="#">
+              Carrito
+            </a>
           </li>
         </ul>
         <button type="button" class="rounded-pill btn-rounded">
@@ -139,11 +141,29 @@
           <hr>
           <!-- START CARRITO -->
           <div id="carrito-container" class="row"></div>
+
           <div id="carrito-footer" class="row"></div>
+          <!-- END CARRITO -->
         </div>
       </div>
     </div>
+  </section>
+  <!-- END CATALOGO SECTION -->
 
+  <!-- NOSOTROS SECTION -->
+  <section id="nosotros" class="nosotros-section">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#6D4DEB" fill-opacity="1"
+        d="M0,224L40,213.3C80,203,160,181,240,176C320,171,400,181,480,170.7C560,160,640,128,720,117.3C800,107,880,117,960,144C1040,171,1120,213,1200,202.7C1280,192,1360,128,1400,96L1440,64L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z">
+      </path>
+    </svg>
+    <div class="container">
+      <div class="row text-center">
+        <h1>Estos somos Nosotros</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro optio aspernatur in quo repudiandae eos
+          commodi fugit at perferendis totam! Velit dignissimos provident nihil modi inventore nobis, perferendis
+          voluptas recusandae.</p>
+      </div>
     </div>
   </section>
 
@@ -155,8 +175,8 @@
         <img id="img" src="" alt="" class="card-img-top">
         <h4 id="band"></h4>
         <h5 id="titulo"></h5>
-        <p id="precio"></p>
-        <button id = "btn" type="button" class="btn-outline-primary mb-2">
+        <p id="precio">$<span></span></p>
+        <button id="btn-add" class="btn-add-carrito">
           Agregar al carrito
         </button>
       </div>
@@ -169,21 +189,39 @@
         <div class="col-12 col-md-4">
           <img id="imgCarrito" src="" alt="" width="25%" height="auto">
         </div>
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-4 nameCarrito">
           <h4 id="bandaCarrito"></h4>
           <h5 id="tituloCarrito"></h5>
         </div>
         <div class="col-12 col-md-4">
-          <p id="precioCarrito"></p>
-          <div class="icon">
-            <button type = "button" class="btn-cat rounded-pill">
-              <i class="fa fa-plus"></i>
-            </button>
-          <button class="btn-cat rounded-pill" type="button">
-            <i class="fa fa-minus"></i>
-          </button>
+          <div class="row">
+            <div>
+            <p id="precioCarrito"></p>
           </div>
+            <div class="icon">
+              <button type="button" class="btn-cat rounded-pill">
+                <i class="fa fa-plus"></i>
+              </button>
+              <button class="btn-cat rounded-pill" type="button">
+                <i class="fa fa-minus"></i>
+              </button>
+            </div>
+          </div>
+          
         </div>
+      </div>
+    </div>
+  </template>
+
+  <template id="carritoFooterTemplate">
+    <div class="row">
+      <div class="btn-carrito">
+        <button class="btn-cat">
+          Vaciar Carrito
+        </button>
+        <button class="btn-cat">
+          Checkout
+        </button>
       </div>
     </div>
   </template>

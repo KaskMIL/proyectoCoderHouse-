@@ -1,0 +1,6 @@
+@use "../custom" as *;
+@use "../components/mixin" as *;
+
+.nosotros-section{
+    @include gradient;
+}

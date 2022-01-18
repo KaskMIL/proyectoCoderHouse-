@@ -34,25 +34,26 @@
     h5{
         font-family:'Poppins', sans-serif;
         font-weight: 300;
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
     p{
         font-family:'Poppins', sans-serif;
-        font-weight: 300;
-        font-size: 0.9rem;
+        font-weight: 500;
+        font-size: 1.2rem;
     }
 }
 
 .carrito{
+    display: flex;
+    justify-content: center ;
     h4{
         font-family:'Poppins', sans-serif;
         font-weight: 900;
-        font-size: 1.5rem;
-        margin-bottom: 1rem
+        font-size: 1rem;
     }
     h5{
         font-weight: 300;
-        font-size: 2.5rem;
+        font-size: 1.5rem;
     }
     p{
         font-size: 2.5rem;

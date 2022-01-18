@@ -9,6 +9,8 @@ const carritoFooter = document.getElementById("carrito-footer");
 const cardTemplate = document.getElementById("card-template").content;
 //carrito template
 const carritoTemplate = document.getElementById("carritoTemplate").content;
+//carrito footer template
+const carritoFooterTemplate = document.getElementById("carritoFooterTemplate").content;
 //document fragment
 const fragment = document.createDocumentFragment();
 //carrito de compras
@@ -39,8 +41,8 @@ const pintarCards = data => {
         cardTemplate.getElementById("band").innerHTML = producto.banda;
         cardTemplate.getElementById("titulo").innerHTML = producto.disco;
         cardTemplate.getElementById("img").setAttribute("src", producto.img);
-        cardTemplate.getElementById("btn").dataset.id = producto.id;
-        cardTemplate.getElementById("precio").innerHTML = producto.precio;
+        cardTemplate.getElementById("btn-add").dataset.id = producto.id;
+        cardTemplate.querySelector("span").innerHTML = producto.precio;
 
         const clone = cardTemplate.cloneNode(true);
         fragment.appendChild(clone);
@@ -49,7 +51,7 @@ const pintarCards = data => {
 }
 
 const addCarrito = e => {
-    if(e.target.classList.contains("btn-outline-primary")){
+    if(e.target.classList.contains("btn-add-carrito")){
         setCarrito(e.target.parentElement);
     }
     e.stopPropagation();
@@ -60,7 +62,7 @@ const setCarrito = objeto =>{
         id: objeto.querySelector("button").dataset.id,
         banda: objeto.querySelector("h4").textContent,
         disco: objeto.querySelector("h5").textContent,
-        precio: objeto.querySelector("p").textContent,
+        precio: objeto.querySelector("span").textContent,
         img: objeto.querySelector("img").getAttribute("src"),
         cantidad: 1
     }
@@ -74,6 +76,7 @@ const setCarrito = objeto =>{
     carrito[producto.id] = {...producto};
     console.log(carrito)
     pintarCarrito();
+    pintarFooter();
 }
 
 const pintarCarrito = () =>{
@@ -88,5 +91,15 @@ const pintarCarrito = () =>{
         fragment.appendChild(clone);
     })
     carritoContainer.appendChild(fragment);
+}
+
+const pintarFooter = () => {
+    carritoFooter.innerHTML = "";
+    if(carrito.length != 0){
+
+        const clone = carritoFooterTemplate.cloneNode(true);
+        fragment.appendChild(clone);
+    }
+    carritoFooter.appendChild(fragment);
 }
 

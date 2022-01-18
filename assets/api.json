@@ -68,5 +68,75 @@
         "disco": "L.A",
         "precio": 350,
         "img": "../images/discos/bech-boys-la.png"
+    },
+    {
+        "id": 11,
+        "banda": "Blur",
+        "disco": "Leisure",
+        "precio": 550,
+        "img": "../images/discos/blur-leisure.png"
+    },
+    {
+        "id": 12,
+        "banda": "Blur",
+        "disco": "The Magic Whip",
+        "precio": 250,
+        "img": "../images/discos/blur-the-magic-whip.png"
+    },
+    {
+        "id": 13,
+        "banda": "Bob Marley",
+        "disco": "Catch a Fire",
+        "precio": 450,
+        "img": "../images/discos/bob-marley-catch-a-fire.jpg"
+    },
+    {
+        "id": 14,
+        "banda": "Daft Punk",
+        "disco": "Random Acces Memories",
+        "precio": 550,
+        "img": "../images/discos/daftpunk-eandom-acces-memories.png"
+    },
+    {
+        "id": 15,
+        "banda": "David Bowie",
+        "disco": "Heroes",
+        "precio": 700,
+        "img": "../images/discos/david-bowie-heroes.jpg"
+    },
+    {
+        "id": 16,
+        "banda": "David Bowie",
+        "disco": "Peter and the Wolf",
+        "precio": 500,
+        "img": "../images/discos/davidbowie-peter-and-the-wolf.png"
+    },
+    {
+        "id": 17,
+        "banda": "Depeche Mode",
+        "disco": "Playing the Angel",
+        "precio": 500,
+        "img": "../images/discos/depeche-mode-playing-the-angel.png"
+    },
+    {
+        "id": 18,
+        "banda": "Dropkick Murphys",
+        "disco": "11 short stories of Pain and Glory",
+        "precio": 350,
+        "img": "../images/discos/dorpkick-murphys.png"
+    },
+    {
+        "id": 19,
+        "banda": "Elbow",
+        "disco": "Flying Dreams",
+        "precio": 350,
+        "img": "../images/discos/elbow_flying_dream.jpg"
+    },
+    {
+        "id": 20,
+        "banda": "Elvis Costello",
+        "disco": "The boy named If",
+        "precio": 450,
+        "img": "../images/discos/elvis_costello_the_boy_named_if.jpg"
     }
 ]
