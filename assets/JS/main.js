@@ -1,19 +1,18 @@
-//toma elementos del DOM
-//card section
+
+//ELEMENTOS
 const cardContainer = document.getElementById("card-container");
-//carrito section
 const carritoContainer = document.getElementById("carrito-container");
-//carrito footer
 const carritoFooter = document.getElementById("carrito-footer");
-//card template
+
+//TEMPLATES
 const cardTemplate = document.getElementById("card-template").content;
-//carrito template
 const carritoTemplate = document.getElementById("carritoTemplate").content;
-//carrito footer template
 const carritoFooterTemplate = document.getElementById("carritoFooterTemplate").content;
-//document fragment
+
+//DOCUMENT FRAGMENT
 const fragment = document.createDocumentFragment();
-//carrito de compras
+
+//CARRITO DE COMPRAS
 let carrito = {};
 
 //espera a cargar completamente el html
@@ -125,6 +124,9 @@ const closeBtn = document.getElementsByClassName("close")[0];
 
 modalBtn.addEventListener('click', () =>{
     modal.style.display = "block";
+    if(carrito.length == 0){
+        carritoFooter.innerHTML = "No hay productos que mostrar";
+    }
 })
 closeBtn.addEventListener('click', () =>{
     modal.style.display = "none";

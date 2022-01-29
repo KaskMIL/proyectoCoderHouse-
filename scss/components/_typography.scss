@@ -1,4 +1,5 @@
 @use '../custom' as *;
+@use '../components/mixin' as *;
 
 
 .display-2{
@@ -43,6 +44,7 @@
     }
 }
 
+
 .carrito{
     display: flex;
     justify-content: center ;
@@ -57,5 +59,28 @@
     }
     p{
         font-size: 2.5rem;
+    }
+}
+
+.nosotros-section{
+    color: white;
+    @include media-breakpoint-down(sm){
+        h1{
+            font-size: 1rem;
+        }
+    }
+    h1{
+        font-family: 'Ultra', serif;
+        font-size: 5rem; 
+    }
+
+    p h2{
+        font-family:'Poppins', sans-serif;
+        font-weight: 300;
+        font-size: 1rem;
+    }
+    p{
+        font-size: 2rem;
+        text-align: left;
     }
 }
