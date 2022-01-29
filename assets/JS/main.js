@@ -26,12 +26,11 @@ cardContainer.addEventListener("click", e => {
 })
 
 const fetchData = async () => {
-    try{
+    try {
         const resultado = await fetch("assets/api.json");
         const data = await resultado.json();
         pintarCards(data);
-    }
-    catch(error){
+    } catch (error) {
         console.log(error);
     }
 }
@@ -51,13 +50,13 @@ const pintarCards = data => {
 }
 
 const addCarrito = e => {
-    if(e.target.classList.contains("btn-add-carrito")){
+    if (e.target.classList.contains("btn-add-carrito")) {
         setCarrito(e.target.parentElement);
     }
     e.stopPropagation();
 }
 
-const setCarrito = objeto =>{
+const setCarrito = objeto => {
     const producto = {
         id: objeto.querySelector("button").dataset.id,
         banda: objeto.querySelector("h4").textContent,
@@ -67,25 +66,27 @@ const setCarrito = objeto =>{
         cantidad: 1
     }
     //aumentar cantidad de mismo producto
-    if(carrito.hasOwnProperty(producto.id)){
+    if (carrito.hasOwnProperty(producto.id)) {
         producto.cantidad = carrito[producto.id].cantidad + 1;
     }
 
     //sumar al carrito como copia del objeto solo senalando el ID
 
-    carrito[producto.id] = {...producto};
-    console.log(carrito)
+    carrito[producto.id] = {
+        ...producto
+    };
     pintarCarrito();
     pintarFooter();
+
 }
 
-const pintarCarrito = () =>{
+const pintarCarrito = () => {
     carritoContainer.innerHTML = "";
-    Object.values(carrito).forEach(producto =>{
+    Object.values(carrito).forEach(producto => {
         carritoTemplate.getElementById("bandaCarrito").innerHTML = producto.banda;
         carritoTemplate.getElementById("tituloCarrito").innerHTML = producto.disco;
         carritoTemplate.getElementById("precioCarrito").innerHTML = `$${parseInt(producto.precio) * parseInt(producto.cantidad)}`;
-        carritoTemplate.getElementById("imgCarrito").setAttribute("src",producto.img);
+        carritoTemplate.getElementById("imgCarrito").setAttribute("src", producto.img);
 
         const clone = carritoTemplate.cloneNode(true);
         fragment.appendChild(clone);
@@ -95,11 +96,43 @@ const pintarCarrito = () =>{
 
 const pintarFooter = () => {
     carritoFooter.innerHTML = "";
-    if(carrito.length != 0){
+    const nPrecio = Object.values(carrito).reduce((acc, {
+        cantidad,
+        precio
+    }) => acc + parseInt(cantidad) * parseInt(precio), 0);
 
-        const clone = carritoFooterTemplate.cloneNode(true);
-        fragment.appendChild(clone);
-    }
+    carritoFooterTemplate.getElementById("carT").textContent = `$${nPrecio}`;
+
+    const clone = carritoFooterTemplate.cloneNode(true);
+    fragment.appendChild(clone);
+
     carritoFooter.appendChild(fragment);
+
+    const vaciarCarrito = document.getElementById("vaciarCarrito");
+    vaciarCarrito.addEventListener('click', () => {
+        modal.style.display = "none";
+        carrito = {};
+        carritoFooter.innerHTML = "No hay productos que mostrar";
+        pintarCarrito();
+    })
 }
+
+//Modal
+
+const modal = document.querySelector(".carro");
+const modalBtn = document.getElementById("btnModal");
+const closeBtn = document.getElementsByClassName("close")[0];
+
+modalBtn.addEventListener('click', () =>{
+    modal.style.display = "block";
+})
+closeBtn.addEventListener('click', () =>{
+    modal.style.display = "none";
+})
+window.addEventListener('click', (e) =>{
+    if(e.target == modal){
+        modal.style.display = "none";
+    }
+})
+
 
